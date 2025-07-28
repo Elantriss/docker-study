@@ -1,0 +1,13 @@
+services:
+#server
+  webserver:
+    image: nginx:latest
+    container_name: app-nginx
+    ports:
+    - "80:80"
+
+#php
+  php:
+    image: php8.3:v1
+    container_name: app-php
+

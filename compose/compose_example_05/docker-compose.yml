@@ -1,0 +1,17 @@
+services:
+#server
+  webserver:
+    image: nginx:latest
+    container_name: website-nginx
+    ports:
+    - "80:80"
+    volumes:
+      - ./nginx/default.conf:/etc/nginx/conf.d/default.conf
+
+#php
+  php:
+    image: php8.3:v1
+    container_name: website-php
+    volumes:
+      - ./php/public:/var/www/html/public
+
