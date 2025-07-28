@@ -33,7 +33,7 @@ services:
     volumes:
       - ./volume_app:/var/lib/mysql
 
-  networks:
-    php_network:
-      driver: bridge
-      name: php_network
+networks:
+  php_network:
+    driver: bridge
+    name: php_network
